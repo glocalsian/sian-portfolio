@@ -3,225 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이시안 Isian — Glocal Communication Expert</title>
-<meta name="description" content="글로벌을 로컬로 잇고, 로컬을 글로벌로 키우는 글로컬 커뮤니케이션 전문가 이시안입니다.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Gowun+Dodum&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>Lee Sian — Glocal Communication Expert</title>
+<meta name="description" content="글로벌로 확장하고, 로컬에서 깊어지는 글로컬 커뮤니케이션 전문가 이시안입니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taevel02/typeface-arita/arita-global-buri.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
-/*
-  PALETTE (이미지에서 추출)
-  --bg        #edeae5  크림 베이지 (배경, 눈 편한)
-  --deep      #2d2640  딥 퍼플 (다크 섹션 배경)
-  --purple    #7b75b8  라벤더 퍼플 (포인트·아이콘)
-  --sky       #89b4d4  스카이 블루 (액센트)
-  --text      #1e1a2e  딥 텍스트
-  --white     #ffffff
-*/
 :root{
-  --bg:          #edeae5;
-  --bg-card:     #f5f3ef;
-  --deep:        #2d2640;
-  --deep-mid:    #3d3558;
-  --purple:      #7b75b8;
-  --purple-dim:  rgba(123,117,184,0.7);
-  --purple-pale: rgba(123,117,184,0.12);
-  --sky:         #89b4d4;
-  --sky-pale:    rgba(137,180,212,0.15);
-  --text:        #1e1a2e;
-  --text-muted:  rgba(30,26,46,0.55);
-  --text-faint:  rgba(30,26,46,0.35);
-  --border:      rgba(30,26,46,0.08);
-  --white:       #ffffff;
+  --bg:#edeae5;--bg-card:#f5f3ef;
+  --deep:#00189d;
+  --purple:#7b75b8;--purple-pale:rgba(123,117,184,0.12);
+  --sky:#89b4d4;
+  --blue:#1337ff;--blue-dim:rgba(19,55,255,0.65);
+  --blue-mid:rgba(19,55,255,0.45);--blue-pale:rgba(19,55,255,0.08);
+  --white:#ffffff;--border:rgba(0,24,157,0.1);
+  --f-title:"Arita Buri",serif;
+  --f-body:"Iropke Batang",serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Gowun Dodum',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body{font-family:var(--f-body);background:var(--bg);color:var(--deep);overflow-x:hidden}
 
-/* ── LANG TOGGLE ── */
-.lang-btn{
-  position:fixed;top:18px;right:18px;z-index:999;
-  display:flex;
-  background:rgba(237,234,229,0.9);
-  border-radius:20px;overflow:hidden;
-  border:0.5px solid rgba(123,117,184,0.25);
-  backdrop-filter:blur(10px);
-  box-shadow:0 2px 14px rgba(45,38,64,0.1);
-}
-.lang-btn button{
-  padding:7px 15px;font-size:11px;font-weight:500;
-  letter-spacing:0.1em;border:none;cursor:pointer;
-  background:transparent;color:var(--purple-dim);
-  transition:all 0.2s;font-family:'Gowun Dodum',sans-serif;
-}
-.lang-btn button.active{background:var(--deep);color:var(--white);}
+.lang-btn{position:fixed;top:18px;right:18px;z-index:999;display:flex;background:rgba(237,234,229,0.92);border-radius:20px;overflow:hidden;border:0.5px solid rgba(19,55,255,0.2);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(19,55,255,0.1);}
+.lang-btn button{padding:7px 15px;font-size:11px;font-weight:500;letter-spacing:0.1em;border:none;cursor:pointer;background:transparent;color:var(--blue-mid);transition:all 0.2s;font-family:var(--f-body);}
+.lang-btn button.active{background:var(--blue);color:var(--white);}
 
-/* ── HERO ── */
-.hero{
-  background:url('./title-bg-img.png') center center / cover no-repeat;
-  min-height:100vh;display:flex;flex-direction:column;
-  justify-content:center;padding:6rem 2rem 5rem;
-  position:relative;overflow:hidden;
-}
+.hero{background:url('./title-bg-img.png') center center / cover no-repeat;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:6rem 2rem 5rem;position:relative;overflow:hidden;}
 .hero-ring{position:absolute;border-radius:50%;pointer-events:none;z-index:1;}
-.hero-ring-1{width:520px;height:520px;top:-160px;right:-160px;border:0.5px solid rgba(123,117,184,0.18);}
-.hero-ring-2{width:300px;height:300px;top:-50px;right:-50px;border:0.5px solid rgba(123,117,184,0.28);}
-.hero-ring-3{width:640px;height:640px;bottom:-220px;left:-220px;border:0.5px solid rgba(137,180,212,0.12);}
-.hero-inner{position:relative;z-index:2;max-width:480px;}
+.hero-ring-1{width:520px;height:520px;top:-160px;right:-160px;border:0.5px solid rgba(19,55,255,0.1);}
+.hero-ring-2{width:300px;height:300px;top:-50px;right:-50px;border:0.5px solid rgba(19,55,255,0.18);}
+.hero-ring-3{width:640px;height:640px;bottom:-220px;left:-220px;border:0.5px solid rgba(19,55,255,0.06);}
+.hero-inner{position:relative;z-index:2;max-width:520px;}
 
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:7px;
-  border:0.5px solid rgba(123,117,184,0.35);
-  background:rgba(123,117,184,0.08);
-  border-radius:20px;padding:5px 14px;
-  font-size:10px;font-weight:500;color:var(--deep);
-  letter-spacing:0.2em;text-transform:uppercase;
-  margin-bottom:2rem;animation:fadeUp 0.8s ease both;
-}
-.hero-name{
-  font-family:'Nanum Myeongjo',serif;
-  font-size:clamp(54px,14vw,82px);font-weight:400;
-  color:var(--deep);line-height:0.95;letter-spacing:0.04em;
-  margin-bottom:0.4rem;animation:fadeUp 0.8s 0.1s ease both;
-}
-.hero-name-en{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(16px,4vw,22px);font-weight:400;font-style:italic;
-  color:var(--purple-dim);letter-spacing:0.22em;margin-bottom:2.5rem;
-  animation:fadeUp 0.8s 0.15s ease both;
-}
-.hero-divider{
-  width:44px;height:1.5px;
-  background:linear-gradient(to right,var(--purple),transparent);
-  margin-bottom:1.5rem;animation:fadeUp 0.8s 0.2s ease both;
-}
-.hero-tagline{
-  font-family:'Nanum Myeongjo',serif;
-  font-size:clamp(17px,4.5vw,21px);font-weight:400;
-  color:var(--deep);line-height:1.8;margin-bottom:1.8rem;
-  animation:fadeUp 0.8s 0.25s ease both;
-}
-.hero-tagline strong{color:var(--purple);font-weight:700;}
-.hero-slogan{
-  font-family:'Playfair Display',serif;font-size:13px;font-style:italic;
-  color:var(--text-muted);letter-spacing:0.04em;line-height:1.8;
-  margin-bottom:3rem;padding-left:14px;
-  border-left:1.5px solid rgba(123,117,184,0.4);
-  animation:fadeUp 0.8s 0.3s ease both;
-}
-.hero-langs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2.5rem;animation:fadeUp 0.8s 0.35s ease both;}
-.lang-pill{font-size:10px;padding:4px 13px;border-radius:20px;border:0.5px solid rgba(123,117,184,0.22);color:var(--text-muted);letter-spacing:0.1em;}
-.lang-pill.active{background:rgba(123,117,184,0.1);border-color:rgba(123,117,184,0.4);color:var(--deep);}
-.hero-contacts{display:flex;flex-direction:column;gap:9px;animation:fadeUp 0.8s 0.4s ease both;}
-.hero-contact-item{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--text-muted);text-decoration:none;transition:color 0.2s;}
-.hero-contact-item:hover{color:var(--deep);}
-.hero-contact-item i{font-size:15px;color:var(--purple);}
-.scroll-hint{
-  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:5px;
-  color:var(--text-faint);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
-  animation:bounce 2.5s infinite;z-index:2;
-}
-.scroll-hint i{font-size:18px;color:var(--purple-dim);}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;border:0.5px solid rgba(19,55,255,0.3);background:rgba(19,55,255,0.06);border-radius:20px;padding:6px 16px;font-family:var(--f-body);font-size:12px;font-weight:500;color:var(--blue);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:2rem;animation:fadeUp 0.8s ease both;}
+.hero-name{font-family:var(--f-title);font-size:clamp(54px,14vw,82px);font-weight:600;color:var(--blue);line-height:0.95;letter-spacing:0.04em;margin-bottom:0.4rem;animation:fadeUp 0.8s 0.1s ease both;}
+.hero-name-en{font-family:var(--f-title);font-size:clamp(20px,5vw,28px);font-weight:300;color:var(--blue-dim);letter-spacing:0.18em;margin-bottom:2.5rem;animation:fadeUp 0.8s 0.15s ease both;}
+.hero-divider{width:44px;height:1.5px;background:linear-gradient(to right,var(--blue),transparent);margin-bottom:1.5rem;animation:fadeUp 0.8s 0.2s ease both;}
+.hero-tagline{font-family:var(--f-title);font-size:clamp(17px,4.5vw,22px);font-weight:300;color:var(--deep);line-height:1.8;margin-bottom:1.8rem;animation:fadeUp 0.8s 0.25s ease both;}
+.hero-tagline strong{color:var(--blue);font-weight:600;}
+.hero-slogan{font-family:var(--f-body);font-size:13px;color:var(--blue-dim);letter-spacing:0.04em;line-height:1.8;margin-bottom:2.5rem;padding-left:14px;border-left:1.5px solid rgba(19,55,255,0.35);animation:fadeUp 0.8s 0.3s ease both;}
+.hero-langs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem;animation:fadeUp 0.8s 0.35s ease both;}
+.lang-pill{font-family:var(--f-body);font-size:11px;padding:5px 14px;border-radius:20px;border:0.5px solid rgba(19,55,255,0.22);color:var(--blue-mid);letter-spacing:0.08em;}
+.lang-pill.active{background:var(--blue-pale);border-color:rgba(19,55,255,0.38);color:var(--blue);}
+.hero-contacts{display:flex;flex-direction:column;gap:10px;animation:fadeUp 0.8s 0.4s ease both;}
+.hero-contact-item{display:flex;align-items:center;gap:10px;font-family:var(--f-body);font-size:14px;font-weight:500;color:var(--blue);text-decoration:none;transition:opacity 0.2s;}
+.hero-contact-item:hover{opacity:0.7;}
+.hero-contact-item i{font-size:17px;color:var(--blue);}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--blue-mid);font-family:var(--f-body);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;animation:bounce 2.5s infinite;z-index:2;}
+.scroll-hint i{font-size:18px;}
 
-/* ── SECTION BASE ── */
 .section{padding:5rem 2rem;background:var(--bg);}
 .section-inner{max-width:480px;margin:0 auto;}
-
-/* 다크 섹션 — deep purple bg */
 .section-deep{background:var(--deep);padding:5rem 2rem;}
 .section-deep .sec-eyebrow{color:var(--sky);}
 .section-deep .sec-eyebrow::after{background:rgba(137,180,212,0.25);}
 .section-deep .sec-title{color:var(--white);}
 
-.sec-eyebrow{
-  font-size:9.5px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;
-  color:var(--purple);margin-bottom:0.5rem;
-  display:flex;align-items:center;gap:10px;
-}
+.sec-eyebrow{font-family:var(--f-body);font-size:9.5px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--purple);margin-bottom:0.5rem;display:flex;align-items:center;gap:10px;}
 .sec-eyebrow::after{content:'';flex:1;height:0.5px;background:rgba(123,117,184,0.22);}
-.sec-title{
-  font-family:'Nanum Myeongjo',serif;
-  font-size:clamp(26px,6.5vw,38px);font-weight:400;
-  color:var(--text);line-height:1.2;margin-bottom:2rem;
-}
+.sec-title{font-family:var(--f-title);font-size:clamp(24px,6vw,36px);font-weight:500;color:var(--deep);line-height:1.2;margin-bottom:2rem;}
 
-/* ── IDENTITY ── */
 .id-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:2rem;}
-.id-card{
-  background:var(--bg-card);border:0.5px solid var(--border);
-  border-radius:16px;padding:20px 16px;
-  transition:transform 0.25s,box-shadow 0.25s;
-}
-.id-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(45,38,64,0.09);}
-.id-card-num{font-size:10px;font-weight:500;color:var(--purple);letter-spacing:0.12em;margin-bottom:8px;}
-.id-card-title{font-family:'Nanum Myeongjo',serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:5px;line-height:1.3;}
-.id-card-sub{font-size:11px;color:var(--text-muted);line-height:1.6;}
+.id-card{background:var(--bg-card);border:0.5px solid var(--border);border-radius:16px;padding:20px 16px;transition:transform 0.25s,box-shadow 0.25s;}
+.id-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,24,157,0.08);}
+.id-card-num{font-family:var(--f-body);font-size:10px;font-weight:500;color:var(--purple);letter-spacing:0.12em;margin-bottom:8px;}
+.id-card-title{font-family:var(--f-title);font-size:14px;font-weight:500;color:var(--deep);margin-bottom:5px;line-height:1.3;}
+.id-card-sub{font-family:var(--f-body);font-size:11px;color:rgba(0,24,157,0.55);line-height:1.6;}
 
-/* ── POWER (deep bg) ── */
 .power-list{display:flex;flex-direction:column;gap:14px;}
-.power-item{
-  display:flex;gap:14px;align-items:flex-start;
-  background:rgba(255,255,255,0.05);
-  border:0.5px solid rgba(255,255,255,0.1);
-  border-radius:16px;padding:18px 16px;
-  transition:background 0.2s;
-}
+.power-item{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);border-radius:16px;padding:18px 16px;transition:background 0.2s;}
 .power-item:hover{background:rgba(123,117,184,0.15);}
-.power-icon{width:38px;height:38px;flex-shrink:0;border-radius:10px;background:rgba(123,117,184,0.18);display:flex;align-items:center;justify-content:center;}
+.power-icon{width:38px;height:38px;flex-shrink:0;border-radius:10px;background:rgba(0,24,157,0.4);display:flex;align-items:center;justify-content:center;}
 .power-icon i{font-size:18px;color:var(--sky);}
-.power-num{font-size:10px;font-weight:500;color:rgba(137,180,212,0.6);letter-spacing:0.12em;margin-bottom:4px;}
-.power-title{font-family:'Nanum Myeongjo',serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:5px;}
-.power-desc{font-size:11.5px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:8px;}
+.power-num{font-family:var(--f-body);font-size:10px;font-weight:500;color:rgba(137,180,212,0.6);letter-spacing:0.12em;margin-bottom:4px;}
+.power-title{font-family:var(--f-title);font-size:14px;font-weight:500;color:var(--white);margin-bottom:5px;}
+.power-desc{font-family:var(--f-body);font-size:11.5px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:8px;}
 .tag-row{display:flex;flex-wrap:wrap;gap:5px;}
-.tag{font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(137,180,212,0.12);border:0.5px solid rgba(137,180,212,0.28);color:var(--sky);}
+.tag{font-family:var(--f-body);font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(137,180,212,0.1);border:0.5px solid rgba(137,180,212,0.28);color:var(--sky);}
 
-/* ── BOOTCAMP ── */
 .bc-wrap{background:var(--bg-card);border:0.5px solid var(--border);border-radius:16px;padding:22px 18px;margin-bottom:1rem;}
 .bc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
-.bc-title{font-family:'Nanum Myeongjo',serif;font-size:14px;font-weight:700;color:var(--text);}
-.bc-badge{font-size:10px;font-weight:500;padding:3px 10px;border-radius:20px;background:var(--purple-pale);border:0.5px solid rgba(123,117,184,0.3);color:var(--purple);letter-spacing:0.08em;}
+.bc-title{font-family:var(--f-title);font-size:14px;font-weight:500;color:var(--deep);}
+.bc-badge{font-family:var(--f-body);font-size:10px;padding:3px 10px;border-radius:20px;background:var(--purple-pale);border:0.5px solid rgba(123,117,184,0.3);color:var(--purple);}
 .bc-pills{display:flex;flex-wrap:wrap;gap:6px;}
-.bc-pill{font-size:10.5px;padding:4px 11px;border-radius:6px;background:var(--bg);border:0.5px solid var(--border);color:var(--text-muted);}
+.bc-pill{font-family:var(--f-body);font-size:10.5px;padding:4px 11px;border-radius:6px;background:var(--bg);border:0.5px solid var(--border);color:rgba(0,24,157,0.55);}
 .bc-pill.hl{background:var(--purple-pale);border-color:rgba(123,117,184,0.28);color:var(--purple);}
-.bc-note{font-size:11px;color:var(--text-faint);line-height:1.6;}
+.bc-note{font-family:var(--f-body);font-size:11px;color:rgba(0,24,157,0.4);line-height:1.6;}
 
-/* ── STORY (deep bg) ── */
-.story-block{
-  background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);
-  border-radius:16px;padding:22px 20px;margin-bottom:14px;
-  position:relative;overflow:hidden;
-}
+.story-block{background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);border-radius:16px;padding:22px 20px;margin-bottom:14px;position:relative;overflow:hidden;}
 .story-block::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--sky);}
-.story-label{font-size:9.5px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--sky);margin-bottom:10px;}
-.story-text{font-family:'Nanum Myeongjo',serif;font-size:16px;font-weight:400;color:rgba(255,255,255,0.78);line-height:1.85;}
+.story-label{font-family:var(--f-body);font-size:9.5px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--sky);margin-bottom:10px;}
+.story-text{font-family:var(--f-title);font-size:15px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.85;}
 
-/* ── INTERESTS ── */
 .interest-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;}
 .interest-chip{background:var(--bg-card);border:0.5px solid var(--border);border-radius:14px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;}
 .interest-chip i{font-size:22px;color:var(--purple);}
-.interest-chip span{font-size:10.5px;color:var(--text-muted);line-height:1.5;}
+.interest-chip span{font-family:var(--f-body);font-size:10.5px;color:rgba(0,24,157,0.55);line-height:1.5;}
 .mbti-block{background:var(--deep);border-radius:14px;padding:18px 16px;display:flex;align-items:center;gap:14px;}
-.mbti-badge{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;font-style:italic;color:var(--sky);flex-shrink:0;line-height:1;}
-.mbti-desc{font-size:11.5px;color:rgba(255,255,255,0.55);line-height:1.65;}
+.mbti-badge{font-family:var(--f-title);font-size:18px;font-weight:300;color:var(--sky);flex-shrink:0;line-height:1;}
+.mbti-desc{font-family:var(--f-body);font-size:11.5px;color:rgba(255,255,255,0.55);line-height:1.65;}
 
-/* ── FOOTER (deep bg) ── */
 .footer{background:var(--deep);padding:4rem 2rem 3rem;text-align:center;}
-.footer-name{font-family:'Nanum Myeongjo',serif;font-size:38px;font-weight:400;color:var(--white);letter-spacing:0.06em;margin-bottom:5px;}
-.footer-role{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:2rem;}
+.footer-name{font-family:var(--f-title);font-size:36px;font-weight:500;color:var(--white);letter-spacing:0.06em;margin-bottom:5px;}
+.footer-role{font-family:var(--f-body);font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:2rem;}
 .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:2.5rem;}
-.footer-link{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.42);text-decoration:none;transition:color 0.2s;}
+.footer-link{display:flex;align-items:center;gap:6px;font-family:var(--f-body);font-size:12px;color:rgba(255,255,255,0.42);text-decoration:none;transition:color 0.2s;}
 .footer-link:hover{color:var(--white);}
 .footer-link i{font-size:15px;color:var(--purple);}
-.footer-copy{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:rgba(255,255,255,0.22);letter-spacing:0.05em;}
+.footer-copy{font-family:var(--f-title);font-size:15px;font-weight:300;color:rgba(255,255,255,0.55);letter-spacing:0.02em;line-height:1.75;}
 
-/* ── ANIM ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.visible{opacity:1;transform:none;}
 
-/* ── LANG ── */
 .ko{display:block}.en{display:none}
 body.lang-en .ko{display:none!important}
 body.lang-en .en{display:block!important}
@@ -240,18 +135,14 @@ body.lang-en .en{display:block!important}
   <div class="hero-ring hero-ring-2"></div>
   <div class="hero-ring hero-ring-3"></div>
   <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <i class="ti ti-map-pin" style="font-size:12px" aria-hidden="true"></i>
-      <span class="ko">Peopluncer · 평택 Based</span>
-      <span class="en">Peopluncer · Pyeongtaek Based</span>
-    </div>
+    <div class="hero-eyebrow"><i class="ti ti-globe" aria-hidden="true"></i>Glocal Communication Expert</div>
     <h1 class="hero-name ko">이시안</h1>
-    <h1 class="hero-name en" style="font-size:clamp(42px,11vw,68px)">Isian</h1>
-    <p class="hero-name-en ko">Isian</p>
-    <p class="hero-name-en en">Lee Si An</p>
+    <h1 class="hero-name en">Lee Sian</h1>
+    <p class="hero-name-en ko">Lee Sian</p>
+    <p class="hero-name-en en">Glocal Creator</p>
     <div class="hero-divider"></div>
-    <p class="hero-tagline ko"><strong>글로벌</strong>을 로컬로 잇고,<br><strong>로컬</strong>을 글로벌로 키우는<br>글로컬 커뮤니케이션 전문가</p>
-    <p class="hero-tagline en">Bridging <strong>Global</strong> to Local,<br>Growing <strong>Local</strong> to Global —<br>Glocal Communication Expert</p>
+    <p class="hero-tagline ko"><strong>글로벌</strong>로 확장하고,<br><strong>로컬</strong>에서 깊어지는<br>글로컬 커뮤니케이션 전문가</p>
+    <p class="hero-tagline en">Expanding <strong>Globally</strong>,<br>Deepening <strong>Locally</strong> —<br>Glocal Communication Expert</p>
     <p class="hero-slogan ko">"Connecting People, Culture &amp; Brands"<br>사람과 문화, 브랜드를 잇는 글로컬 크리에이터</p>
     <p class="hero-slogan en">"Connecting People, Culture &amp; Brands"<br>A Glocal Creator bridging people, culture &amp; brands</p>
     <div class="hero-langs">
@@ -268,12 +159,11 @@ body.lang-en .en{display:block!important}
   <div class="scroll-hint"><i class="ti ti-chevron-down" aria-hidden="true"></i>scroll</div>
 </section>
 
-<!-- IDENTITY — bg #edeae5 -->
+<!-- ABOUT SIAN -->
 <section class="section reveal">
   <div class="section-inner">
     <p class="sec-eyebrow">Identity</p>
-    <h2 class="sec-title ko">나는 누구인가</h2>
-    <h2 class="sec-title en">Who I Am</h2>
+    <h2 class="sec-title">About Sian</h2>
     <div class="id-grid">
       <div class="id-card">
         <div class="id-card-num">01</div>
@@ -307,12 +197,12 @@ body.lang-en .en{display:block!important}
   </div>
 </section>
 
-<!-- MAIN POWER — bg deep purple -->
+<!-- 함께할 수 있는 이유 -->
 <section class="section-deep reveal">
   <div class="section-inner">
     <p class="sec-eyebrow">Main Power</p>
-    <h2 class="sec-title ko">핵심 강점</h2>
-    <h2 class="sec-title en">Core Strengths</h2>
+    <h2 class="sec-title ko">함께할 수 있는 이유</h2>
+    <h2 class="sec-title en">Why Work With Me</h2>
     <div class="power-list">
       <div class="power-item">
         <div class="power-icon"><i class="ti ti-world" aria-hidden="true"></i></div>
@@ -360,7 +250,7 @@ body.lang-en .en{display:block!important}
           <div class="power-num">05</div>
           <div class="power-title">Arts &amp; Aesthetic Sense</div>
           <div class="power-desc ko">실용무용 전공. K-POP 댄스·무대 퍼포먼스 디렉팅. 패션업계 종사 경험. 브랜드 감성·미학 설계 특화.</div>
-          <div class="power-desc en">Majored in practical dance. K-POP &amp; performance directing. Fashion industry experience. Brand aesthetics specialist.</div>
+          <div class="power-desc en">Majored in practical dance. K-POP &amp; performance directing. Fashion experience. Brand aesthetics specialist.</div>
           <div class="tag-row"><span class="tag">#실용무용전공</span><span class="tag">#퍼포먼스</span><span class="tag">#비주얼디렉팅</span></div>
         </div>
       </div>
@@ -368,12 +258,12 @@ body.lang-en .en{display:block!important}
   </div>
 </section>
 
-<!-- BUSINESS DEV — bg #edeae5 -->
+<!-- 만들어온 기록 -->
 <section class="section reveal">
   <div class="section-inner">
     <p class="sec-eyebrow">Business Development</p>
-    <h2 class="sec-title ko">사업 개발 역량</h2>
-    <h2 class="sec-title en">Business Skills</h2>
+    <h2 class="sec-title ko">만들어온 기록</h2>
+    <h2 class="sec-title en">What I've Built</h2>
     <div class="bc-wrap">
       <div class="bc-top">
         <span class="bc-title ko">사업개발 부트캠프 수료</span>
@@ -398,33 +288,33 @@ body.lang-en .en{display:block!important}
   </div>
 </section>
 
-<!-- STORY — bg deep purple -->
+<!-- 조용한 고백 -->
 <section class="section-deep reveal">
   <div class="section-inner">
     <p class="sec-eyebrow">Story</p>
-    <h2 class="sec-title ko">나의 이야기</h2>
-    <h2 class="sec-title en">My Story</h2>
+    <h2 class="sec-title ko">조용한 고백</h2>
+    <h2 class="sec-title en">A Quiet Confession</h2>
     <div class="story-block">
-      <div class="story-label ko">최근 1년 가장 행복했던 순간</div>
-      <div class="story-label en">Happiest Moment This Year</div>
+      <div class="story-label ko">최근 느낀 기쁨의 시간</div>
+      <div class="story-label en">A Moment of Recent Joy</div>
       <p class="story-text ko">"모든 소음을 걷어내고 내 안의 진짜 목소리에 온전히 귀를 기울이는 시간을 가진 것"</p>
       <p class="story-text en">"Taking time to strip away all the noise and truly listen to my own inner voice."</p>
     </div>
     <div class="story-block">
-      <div class="story-label ko">실패에서 배운 것</div>
-      <div class="story-label en">What Failure Taught Me</div>
+      <div class="story-label ko">시간이 가르쳐준 것</div>
+      <div class="story-label en">What Time Has Taught Me</div>
       <p class="story-text ko">"사회의 틀에 맞춰 나를 외면하던 지난 선택들 끝에서야, 앞으로의 모든 선택은 오직 내 가치와 철학을 기준으로 하겠다는 단단한 다짐을 갖게 되었습니다."</p>
       <p class="story-text en">"After years of ignoring myself to fit society's mold, I made a firm commitment — every choice from now on will be guided only by my own values and philosophy."</p>
     </div>
   </div>
 </section>
 
-<!-- INTERESTS — bg #edeae5 -->
+<!-- 삶을 대하는 태도 -->
 <section class="section reveal">
   <div class="section-inner">
     <p class="sec-eyebrow">Philosophy &amp; Interests</p>
-    <h2 class="sec-title ko">가치관 &amp; 관심사</h2>
-    <h2 class="sec-title en">Values &amp; Interests</h2>
+    <h2 class="sec-title ko">삶을 대하는 태도</h2>
+    <h2 class="sec-title en">How I Face Life</h2>
     <div class="interest-row">
       <div class="interest-chip">
         <i class="ti ti-book-2" aria-hidden="true"></i>
@@ -450,16 +340,17 @@ body.lang-en .en{display:block!important}
   </div>
 </section>
 
-<!-- FOOTER — bg deep purple -->
+<!-- FOOTER -->
 <footer class="footer">
-  <p class="footer-name">이시안 · Isian</p>
-  <p class="footer-role">Glocal Communication Expert · Peopluncer</p>
+  <p class="footer-name">이시안 · Lee Sian</p>
+  <p class="footer-role">Glocal Communication Expert · Glocal Creator</p>
   <div class="footer-links">
     <a href="tel:010-XXXX-XXXX" class="footer-link"><i class="ti ti-phone" aria-hidden="true"></i>010-XXXX-XXXX</a>
     <a href="mailto:glocal.isian@gmail.com" class="footer-link"><i class="ti ti-mail" aria-hidden="true"></i>glocal.isian@gmail.com</a>
     <a href="https://instagram.com/glocal.isian" class="footer-link"><i class="ti ti-brand-instagram" aria-hidden="true"></i>@glocal.isian</a>
   </div>
-  <p class="footer-copy">"나의 삶은 하나의 브랜드다."</p>
+  <p class="footer-copy ko">"지역에 뿌리내리고 세계로 꽃피워나가는<br>모든 사람에게, 콘텐츠와 커뮤니티의 힘으로 함께합니다."</p>
+  <p class="footer-copy en">"For everyone who blooms locally and reaches globally —<br>together, through the power of content and community."</p>
 </footer>
 
 <script>
