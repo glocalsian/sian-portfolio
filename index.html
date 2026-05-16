@@ -49,6 +49,8 @@ body{font-family:var(--f-body);background:var(--bg);color:var(--deep);overflow-x
 .hero-contact-item{display:flex;align-items:center;gap:10px;font-family:var(--f-body);font-size:14px;font-weight:500;color:var(--blue);text-decoration:none;transition:opacity 0.2s;}
 .hero-contact-item:hover{opacity:0.7;}
 .hero-contact-item i{font-size:17px;color:var(--blue);}
+.kakao-icon{width:17px;height:17px;object-fit:contain;filter:brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(4000%) hue-rotate(215deg) brightness(100%);}
+.kakao-icon-footer{width:15px;height:15px;object-fit:contain;filter:brightness(0) saturate(100%) invert(60%) sepia(20%) saturate(500%) hue-rotate(215deg) brightness(120%);}
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--blue-mid);font-family:var(--f-body);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;animation:bounce 2.5s infinite;z-index:2;}
 .scroll-hint i{font-size:18px;}
 
@@ -112,6 +114,15 @@ body{font-family:var(--f-body);background:var(--bg);color:var(--deep);overflow-x
 .footer-link i{font-size:15px;color:var(--purple);}
 .footer-copy{font-family:var(--f-title);font-size:15px;font-weight:300;color:rgba(255,255,255,0.55);letter-spacing:0.02em;line-height:1.75;}
 
+.profile-wrap{display:flex;align-items:center;gap:20px;margin-bottom:28px;}
+.profile-ring-outer{width:110px;height:110px;flex-shrink:0;border-radius:50%;padding:3px;background:linear-gradient(135deg,#1337ff,#7b75b8);box-shadow:0 6px 24px rgba(19,55,255,0.18);}
+.profile-ring-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;border:3px solid #f5f3ef;}
+.profile-img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.profile-info{flex:1;}
+.profile-name{font-family:var(--f-title);font-size:17px;font-weight:500;color:var(--deep);margin-bottom:4px;}
+.profile-role{font-family:var(--f-body);font-size:11px;font-weight:500;color:var(--blue);letter-spacing:0.08em;margin-bottom:3px;}
+.profile-sub{font-family:var(--f-body);font-size:10.5px;color:rgba(0,24,157,0.5);line-height:1.5;}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
@@ -151,7 +162,7 @@ body.lang-en .en{display:block!important}
       <span class="lang-pill active">日本語</span>
     </div>
     <div class="hero-contacts">
-      <a href="tel:010-XXXX-XXXX" class="hero-contact-item"><i class="ti ti-phone" aria-hidden="true"></i>010-XXXX-XXXX</a>
+      <a href="https://open.kakao.com/o/sHbWddvi" target="_blank" class="hero-contact-item"><img src="./kakao-icon.png" alt="KakaoTalk" class="kakao-icon">카카오톡 1:1 채팅</a>
       <a href="mailto:glocal.isian@gmail.com" class="hero-contact-item"><i class="ti ti-mail" aria-hidden="true"></i>glocal.isian@gmail.com</a>
       <a href="https://instagram.com/glocal.isian" class="hero-contact-item"><i class="ti ti-brand-instagram" aria-hidden="true"></i>@glocal.isian</a>
     </div>
@@ -164,6 +175,20 @@ body.lang-en .en{display:block!important}
   <div class="section-inner">
     <p class="sec-eyebrow">Identity</p>
     <h2 class="sec-title">About Sian</h2>
+    <div class="profile-wrap">
+      <div class="profile-ring-outer">
+        <div class="profile-ring-inner">
+          <img src="./profile-photo.png" alt="Lee Sian 프로필 사진" class="profile-img">
+        </div>
+      </div>
+      <div class="profile-info">
+        <p class="profile-name">이시안 · Lee Sian</p>
+        <p class="profile-role ko">글로컬 커뮤니케이션 전문가</p>
+        <p class="profile-role en">Glocal Communication Expert</p>
+        <p class="profile-sub ko">사람과 문화, 브랜드를 잇는 글로컬 크리에이터</p>
+        <p class="profile-sub en">Connecting People, Culture &amp; Brands</p>
+      </div>
+    </div>
     <div class="id-grid">
       <div class="id-card">
         <div class="id-card-num">01</div>
@@ -383,7 +408,7 @@ body.lang-en .en{display:block!important}
   <p class="footer-name">이시안 · Lee Sian</p>
   <p class="footer-role">Glocal Communication Expert · Glocal Creator</p>
   <div class="footer-links">
-    <a href="tel:010-XXXX-XXXX" class="footer-link"><i class="ti ti-phone" aria-hidden="true"></i>010-XXXX-XXXX</a>
+    <a href="https://open.kakao.com/o/sHbWddvi" target="_blank" class="footer-link"><img src="./kakao-icon.png" alt="KakaoTalk" class="kakao-icon-footer">카카오톡 1:1 채팅</a>
     <a href="mailto:glocal.isian@gmail.com" class="footer-link"><i class="ti ti-mail" aria-hidden="true"></i>glocal.isian@gmail.com</a>
     <a href="https://instagram.com/glocal.isian" class="footer-link"><i class="ti ti-brand-instagram" aria-hidden="true"></i>@glocal.isian</a>
   </div>
